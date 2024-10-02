@@ -1,9 +1,25 @@
 
-# The solutions for part A
+"""
+TECH2 mandatory assignment - Part A
+"""
+
 from math import sqrt 
 
 #1 - Finding the Standard deviation with loops
 def std_loops(x):
+    """
+    Compute standard deviation of x using loops.
+
+    Parameters
+    ----------
+    x: Sequence of numbers
+
+    Returns
+    -------
+    sd : float
+        Standard deviation of the list of numbers.
+    """
+
     sum_x = 0
     sum_x_squared = 0
     N = 0
@@ -28,16 +44,31 @@ print(f"Standard Deviation using loops: {StandardDeviationLoops:.3f}")
 #2 - Finding the standard deviation using built-in functions
 
 def std_builtin(x): 
-        N = len(x)
-        meanX = x[0]*sum(x)/N
-        sumSquares = sum(i**2 for i in x)
-        meanSquares = sumSquares/N
+        
+    """
+    Compute standard deviation of x using the built-in functions sum()
+    and len().
+
+    Parameters
+    ----------
+    x: Sequence of numbers
+
+    Returns
+    -------
+    sd : float
+        Standard deviation of the list of numbers.
+    """
+        
+    N = len(x)
+    meanX = x[0]*sum(x)/N
+    sumSquares = sum(i**2 for i in x)
+    meanSquares = sumSquares/N
 
 
-        vSquared =  meanSquares - (meanX)**2
-        LoopStandardDeviation = float(sqrt(vSquared))
+    vSquared =  meanSquares - (meanX)**2
+    LoopStandardDeviation = float(sqrt(vSquared))
 
-        return LoopStandardDeviation
+    return LoopStandardDeviation
 
 result = std_builtin([1, 2, 3, 4, 5])
 print(f"Standard Deviation using builtin: {result:.3f}")
@@ -46,6 +77,19 @@ print(f"Standard Deviation using builtin: {result:.3f}")
 
 #3 - Finding the Standard Deviation with numpy
 
+"""
+    Compute standard deviation of x using numpy functions
+
+    Parameters
+    ----------
+    x: Sequence of numbers
+
+    Returns
+    -------
+    sd : float
+        Standard deviation of the list of numbers.
+    """
+
 import numpy as np
 
 num_lst1 = [1, 2, 3, 4, 5]
@@ -53,3 +97,4 @@ num_lst1 = [1, 2, 3, 4, 5]
 NumpyStd = np.std(num_lst1)
 
 print(f'Standard Deviation using numpy: {NumpyStd:.3f}')
+
