@@ -28,10 +28,6 @@ print(f"Standard Deviation using loops: {StandardDeviationLoops:.3f}")
 #2 - Finding the standard deviation using built-in functions
 
 def std_builtin(x): 
-    # Compute standard deviation of x using loops
-
-    #Parameters
-    # x: sequence of numbers
         N = len(x)
         meanX = x[0]*sum(x)/N
         sumSquares = sum(i**2 for i in x)
