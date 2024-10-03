@@ -5,6 +5,8 @@ TECH2 mandatory assignment - Part A
 
 from math import sqrt 
 
+data = [1, 2, 3, 4, 5]
+
 #1 - Finding the Standard deviation with loops
 def std_loops(x):
     """
@@ -34,11 +36,11 @@ def std_loops(x):
 
     return sqrt(mean_x_squared - mean**2)
 
-data = [1, 2, 3, 4, 5]
 StandardDeviationLoops = std_loops(data)
 
+print(f"1. Standard Deviation using loops: {StandardDeviationLoops:.3f}")
 
-print(f"Standard Deviation using loops: {StandardDeviationLoops:.3f}")
+
 
 
 #2 - Finding the standard deviation using built-in functions
@@ -70,8 +72,8 @@ def std_builtin(x):
 
     return LoopStandardDeviation
 
-result = std_builtin([1, 2, 3, 4, 5])
-print(f"Standard Deviation using builtin: {result:.3f}")
+result = std_builtin(data)
+print(f"2. Standard Deviation using builtin: {result:.3f}")
 
 
 
@@ -92,9 +94,7 @@ print(f"Standard Deviation using builtin: {result:.3f}")
 
 import numpy as np
 
-num_lst1 = [1, 2, 3, 4, 5]
+NumpyStd = np.std(data)
 
-NumpyStd = np.std(num_lst1)
-
-print(f'Standard Deviation using numpy: {NumpyStd:.3f}')
+print(f'3. Standard Deviation using numpy: {NumpyStd:.3f}')
 
